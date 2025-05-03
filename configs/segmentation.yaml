@@ -1,0 +1,34 @@
+OUTPUT_DIR: "./res/dualgan"
+
+MODELS:
+  # mod: OSA False -> True
+  # OUT_ADV: False
+  OUT_ADV: True
+  BACKBONE : "DeepLabV3"
+  ENCODER : "resnet34"
+  # IN_CHANNELS: 4
+  IN_CHANNELS: 3
+
+TRAIN:
+  # TOTAL_EPOCH: 101
+  TOTAL_EPOCH: 101
+  BATCH_SIZE: 8
+  LR: 0.0002
+
+DATASETS:
+  SOURCE_DATASET_PATH: "./res/exp_6/RGB/data"
+  # SOURCE_DATASET_PATH: "./datasets/PotsdamRGB"
+  # SOURCE_DATASET_PATH: "./datasets/PotsdamRGB_DSM"
+  SOURCE_PART: "all"
+  # TARGET_DATASET_PATH: "./datasets/Vaihingen"
+  # TARGET_DATASET_PATH: "./datasets/Bhopal_RGB_nDSM_v3"
+  TARGET_DATASET_PATH: "./datasets/Bhopal_RGB"
+  TARGET_PART: "all"
+  # VAL_DATASET_PATH: "./datasets/Vaihingen"
+  # VAL_PART: "test"
+  # EVL_DATASET_PATH: "./datasets/Vaihingen"
+  # EVL_DATASET_PATH: "./res/exp_4/data"
+  EVL_DATASET_PATH: "./datasets/PotsdamRGB"
+  EVL_PART: "train"
+  EVL_BATCH: 8
+  EVL_GENERATE: False

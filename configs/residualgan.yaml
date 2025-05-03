@@ -1,0 +1,42 @@
+OUTPUT_DIR: "./res/dualgan/rdg_pi"
+MODELS:
+  # IN_CHANNELS: 3
+  IN_CHANNELS: 4
+  GENERATOR: "UNet"
+  # RESIZE_BLOCK: False
+  RESIZE_BLOCK: True
+  INTERPOLATION: "bilinear"
+  DEVICE: "cuda"
+  K: 1.0
+DATASETS:
+  # SOURCE_PATH: "./datasets/PotsdamIRRG"
+  # SOURCE_PATH: "./datasets/PotsdamRGB"
+  SOURCE_PATH: "./datasets/PotsdamRGB_DSM"
+  # TARGET_PATH: "./datasets/Vaihingen_dsm"
+  # TARGET_PATH: "./datasets/Bhopal_RGB_nDSM"
+  TARGET_PATH: "./datasets/Bhopal_RGB_nDSM_v3"
+  # TARGET_PATH: "./datasets/Bhopal_RGB"
+  SOURCE_SIZE: 896
+  # TARGET_SIZE: 512
+  TARGET_SIZE: 1152
+LOSS:
+  ADV: 5
+  CYCLE: 10
+  GP: 1
+  DEPTH: 0.0
+  DEPTH_CYCLE: 0.0
+TRAIN:
+  EPOCH: 0
+  TOTAL_EPOCH: 101
+  # TOTAL_EPOCH: 21
+  BATCH_SIZE: 1
+  LR: 0.0005
+  B1: 0.5
+  B2: 0.999
+  N_CPU: 8
+  N_CRITIC: 5
+  CHECKPOINT: 100
+  # CHECKPOINT: 20
+  DEPTH_LOSS : "berhu"
+
+

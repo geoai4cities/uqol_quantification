@@ -1,0 +1,7 @@
+class,r,g,b
+background, 255,0,0
+impervious-surfaces, 255, 255, 255
+car, 255, 255, 0
+tree, 0, 255, 0
+low-vegetation, 0, 255, 255
+building, 0, 0, 255
