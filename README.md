@@ -16,7 +16,7 @@
 **Dataset:**
 
 * Potsdam and Bhopal datasets are used for training.
-* Download the dataset from: 
+* Download the dataset from [here](https://drive.google.com/file/d/18K5dyeNwCyE46FYFBBJCSutALwdoUGRX/view?usp=sharing).
 
 **Training:**
 
